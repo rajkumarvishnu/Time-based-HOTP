@@ -3,7 +3,6 @@ import hashlib
 import time
 
 
-
 def HOTP(key, counter, digits=6):
     # Convert counter to a byte string using big endian encoding
     counter_bytes = counter.to_bytes(8, 'big')
@@ -27,9 +26,6 @@ def HOTP(key, counter, digits=6):
     hotp = str(hotp).zfill(digits)
 
     return hotp
-
-
-
 
 
 def generate_HOTP(key, digits=6):
